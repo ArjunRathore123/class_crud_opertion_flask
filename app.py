@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from user_controller import User,SingleUser
+from connection_db import create_table
 app = Flask(__name__)
 api = Api(app)
 
@@ -59,4 +60,5 @@ api.add_resource(SingleUser, '/user/<int:id>')
 
 
 if __name__ == '__main__':
+    create_table()
     app.run(debug=True)

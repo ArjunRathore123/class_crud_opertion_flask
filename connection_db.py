@@ -11,10 +11,10 @@ def create_table():
     cursor = connection.cursor()
 
     create_table_query = '''
-    CREATE TABLE IF NOT EXISTS users (
+    CREATE TABLE IF NOT EXISTS student (
         id SERIAL PRIMARY KEY,
-        username VARCHAR(50) NOT NULL,
-        email VARCHAR(100) NOT NULL
+        student_name VARCHAR(100), contact varchar(10),address varchar(100) ,
+        college_name VARCHAR(100)
     );
     '''
 
